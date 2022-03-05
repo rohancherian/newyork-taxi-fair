@@ -1,0 +1,7 @@
+SELECT ccc.borough 
+FROM `bigquery-public-data.new_york_taxi_trips.taxi_zone_geom`ccc 
+RIGHT JOIN `bigquery-public-data.new_york_taxi_trips.tlc_fhv_trips_2015` bbb
+ON ccc.borough=bbb.borough
+GROUP BY ccc.borough
+LIMIT 100
+
